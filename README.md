@@ -56,16 +56,6 @@ A Streamlit app that mixes **RAG over your documents**, **tool-augmented agents*
 └─ generated_images/           # (created at runtime) images from DALL·E
 ```
 
----
-
-## Prerequisites
-
-- Python 3.10+
-- A Pinecone account & API key
-- An OpenAI API key
-- (Optional) A virtual environment
-
----
 
 ## Installation
 
@@ -82,24 +72,6 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 ```
-
-If you don’t have a `requirements.txt` yet, start with:
-
-```txt
-streamlit
-python-dotenv
-openai>=1.0.0
-pinecone-client
-langchain
-langchain-community
-langchain-openai
-langgraph
-pydantic
-```
-
-> Adjust versions as needed for your environment.
-
----
 
 ## Configuration
 
@@ -155,6 +127,11 @@ Open the URL shown in your terminal (typically `http://localhost:8501`).
 ---
 
 ## How It Works (under the hood)
+
+**Core flow (LangGraph Engine)**
+![Adaptive RAG Chat Architecture](./diagram.svg)
+
+
 
 ### Indexing & Summaries
 - `create_index.py` loads & splits documents (recursive splitter with overlap) and upserts chunks:
