@@ -158,4 +158,3 @@ Open the URL shown in your terminal (typically `http://localhost:8501`).
 
 ---
 
-a mode, attach files (for RAG), and ask away 🚀
